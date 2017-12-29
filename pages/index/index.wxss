@@ -1,0 +1,39 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -80px;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin: 10px 0;
+}
+
+.anychat-desc-title {
+  color: rgb(20,145,237);
+  padding-left: 20px;
+}
+.desc-container {
+  padding: 0 8px;
+}
+
+.liverouter {
+  margin-top: 10px;
+}
+.liverouter button {
+  margin-left: 10px;
+  margin-right: 10px;
+  display: inline-block;
+}
