@@ -52,7 +52,6 @@ Page({
         }
       })
     }
-    console.log(111)
   },
   getUserInfo: function(e) {
     console.log(e)

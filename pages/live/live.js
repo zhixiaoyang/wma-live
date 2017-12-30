@@ -11,7 +11,8 @@ const decrypto = function(sct) {
 
 Page({
   data: {
-    secret: decrypto('E4BDA0E5BE88E5A5BDEFBC8CE68891E5BE88E5969CE6ACA2E4BDA0'),
+    secret: decrypto(app.globalData.secret),
+    isvip: false,
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
@@ -29,6 +30,7 @@ Page({
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
+        isvip: app.globalData.vips.includes(app.globalData.userInfo.nickName),
         hasUserInfo: true
       })
     } else if (this.data.canIUse) {
@@ -37,6 +39,7 @@ Page({
       app.userInfoReadyCallback = res => {
         this.setData({
           userInfo: res.userInfo,
+          isvip: app.globalData.vips.includes(res.userInfo.nickName),
           hasUserInfo: true
         })
       }
@@ -47,19 +50,11 @@ Page({
           app.globalData.userInfo = res.userInfo
           this.setData({
             userInfo: res.userInfo,
+            isvip: app.globalData.vips.includes(res.userInfo.nickName),
             hasUserInfo: true
           })
         }
       })
     }
-    console.log(111)
-  },
-  getUserInfo: function (e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
   }
 })

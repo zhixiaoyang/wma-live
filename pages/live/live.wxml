@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="container">
   <view class='title-info'>Welcome {{userInfo.nickName}}</view>
-  <view class='title-info' wx:if="{{userInfo.nickName == 'La Tour Eiffel'}}">{{secret}}</view>
+  <view class='title-info' wx:if="{{isvip}}">{{secret}}</view>
   <live-pusher url="rtmp://118.190.70.37:1935/live/stream" max-bitrate="200" mode="RTC" autopush bindstatechange="statechange" style="width: 300px; height: 225px;" />
 </view>
