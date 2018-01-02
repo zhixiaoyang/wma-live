@@ -37,3 +37,9 @@
   margin-right: 10px;
   display: inline-block;
 }
+.system-info {
+  padding: 10px 20px;
+}
+.sys-info-item {
+  display: block;
+}

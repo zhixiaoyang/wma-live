@@ -10,6 +10,11 @@
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
+  <view class='system-info'>
+    <text class='sys-info-item'>SDKVersion: {{sysInfo.SDKVersion}}</text>
+    <text class='sys-info-item'>System version: {{sysInfo.system}}</text>
+    <text class='sys-info-item'>pixelRatio: {{sysInfo.pixelRatio}}</text>
+  </view>
   <view class='liverouter'>
     <button type="primary" size="primary" bindtap="gotolive">开始直播</button>
     <button type="primary" size="primary" bindtap="gototv">观看直播</button>

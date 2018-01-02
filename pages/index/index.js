@@ -7,7 +7,8 @@ Page({
     motto: 'Hello AnyChat',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    sysInfo: {}
   },
   //事件处理函数
   bindViewTap: function() {
@@ -26,6 +27,7 @@ Page({
     })
   },
   onLoad: function () {
+    var _this = this;
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -52,6 +54,17 @@ Page({
         }
       })
     }
+    wx.getSystemInfo({
+      success: function (res) {
+        _this.setData({
+          sysInfo: res
+        });
+      }
+    })
+  },
+  onHide: function () {
+    // Do something when page hide.
+    console.log("onHide")
   },
   getUserInfo: function(e) {
     console.log(e)
