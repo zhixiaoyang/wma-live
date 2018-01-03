@@ -26,6 +26,41 @@ Page({
       url: '../tv/tv'
     })
   },
+  gotomap: function () {
+    wx.navigateTo({
+      url: '../map/map'
+    })
+  }, 
+  gotorecord: function() {
+    wx.navigateTo({
+      url: '../record/record'
+    })
+  }, 
+  gotoqrcode: function () {
+    wx.scanCode({
+      success: (res) => {
+        wx.showModal({
+          title: '提示',
+          content: res.result,
+          success: function (res) {
+            if (res.confirm) {
+              console.log('用户点击确定')
+            } else if (res.cancel) {
+              console.log('用户点击取消')
+            }
+          }
+        });
+        console.log(res)
+      },
+      fail: function(err) {
+        wx.showToast({
+          title: '扫码失败',
+          icon: 'success',
+          duration: 2000
+        })
+      }
+    })
+  },
   onLoad: function () {
     var _this = this;
     if (app.globalData.userInfo) {

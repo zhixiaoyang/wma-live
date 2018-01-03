@@ -13,10 +13,16 @@
   <view class='system-info'>
     <text class='sys-info-item'>SDKVersion: {{sysInfo.SDKVersion}}</text>
     <text class='sys-info-item'>System version: {{sysInfo.system}}</text>
-    <text class='sys-info-item'>pixelRatio: {{sysInfo.pixelRatio}}</text>
   </view>
   <view class='liverouter'>
     <button type="primary" size="primary" bindtap="gotolive">开始直播</button>
     <button type="primary" size="primary" bindtap="gototv">观看直播</button>
+  </view>
+  <view class='liverouter'>
+    <button type="primary" size="primary" bindtap="gotorecord">拍照录像</button>
+    <button type="primary" size="primary" bindtap="gotomap">打开地图</button>
+  </view>
+  <view class='liverouter'>
+    <button type="primary" size="primary" bindtap="gotoqrcode">扫一扫</button>
   </view>
 </view>

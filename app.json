@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/live/live",
-    "pages/tv/tv"
+    "pages/tv/tv",
+    "pages/map/map",
+    "pages/record/record"
   ],
   "window":{
     "backgroundTextStyle":"light",
