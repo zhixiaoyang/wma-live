@@ -1,0 +1,7 @@
+.opt-wrapper {
+  text-align: center;
+}
+.opt-wrapper > button {
+  display: inline-block;
+  margin: 10px;
+}

@@ -35,7 +35,7 @@ App({
   },
   globalData: {
     userInfo: null,
-    vips: ['La Tour Eiffel', '忆楼欢'],
+    vips: ['La Tour Eiffel'],
     secret: 'E4BDA0E5BE88E5A5BDEFBC8CE68891E5BE88E5969CE6ACA2E4BDA0'
   }
 })

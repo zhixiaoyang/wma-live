@@ -6,7 +6,9 @@ let ctx = {};
 let recording = false;
 Page({
   data: {
-    btntext: '开始录制'
+    btntext: '开始录制',
+    preview: '',
+    btntype: 'primary'
   },
   onShow: function () {
     ctx = wx.createCameraContext()
@@ -22,7 +24,8 @@ Page({
       quality: 'high',
       success: (res) => {
         this.setData({
-          p_src: res.tempImagePath
+          p_src: res.tempImagePath,
+          preview: 'image'
         })
       }
     })
@@ -35,7 +38,9 @@ Page({
           recording = false;
           _this.setData({
             btntext: '开始录制',
-            v_src: res.tempVideoPath
+            btntype: 'primary',
+            v_src: res.tempVideoPath,
+            preview: 'video'
           })
         }
       })
@@ -45,7 +50,8 @@ Page({
           console.log('开始成功');
           recording = true;
           _this.setData({
-            btntext: '正在录制'
+            btntext: '正在录制',
+            btntype: 'warn',
           })
         },
         fail: function(err){
