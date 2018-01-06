@@ -1,28 +1,41 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<view class="main-container">
+  <view class='main-header'>佰锐科技</view>
+  <view class='introduce-text'>
+  <text style='color: rgb(20,145,237);'>广州佰锐网络科技有限公司</text>（简称“佰锐”，英文：GuangZhou BaiRui Network Technology Co., Ltd.）始创于2005年，是一家专业从事网络语音视频技术研究与系统开发的国家高新技术企业。成立至今，已为国内外上千家客户提供优质的产品与服务。
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class='tag-container'>
+    <view class='tag-line'>
+      <view>
+        <image style="width: 130px; height: 148px;" mode="" src="../Resources/main/time.png"></image>
+      </view>
+      <view>12年技术积淀</view>
+    </view>
+    <view class='tag-line'>
+      <view>
+        <image style="width: 130px; height: 148px;" mode="" src="../Resources/main/rate.png"></image>
+      </view>
+      <view>95%证券市场占有率</view>
+    </view>
   </view>
-  <view class='system-info'>
-    <text class='sys-info-item'>SDKVersion: {{sysInfo.SDKVersion}}</text>
-    <text class='sys-info-item'>System version: {{sysInfo.system}}</text>
+  <view class='tag-container'>
+    <view class='tag-line'>
+      <view>
+        <image style="width: 130px; height: 148px;" mode="" src="../Resources/main/team.png"></image>
+      </view>
+      <view>280人专业团队</view>
+    </view>
+    <view class='tag-line'>
+      <view>
+        <image style="width: 130px; height: 148px;" mode="" src="../Resources/main/money.png"></image>
+      </view>
+      <view>音视频领域</view>
+    </view>
   </view>
-  <view class='liverouter'>
-    <button type="primary" size="primary" bindtap="gotolive">开始直播</button>
-    <button type="primary" size="primary" bindtap="gototv">观看直播</button>
+  <view class='introduce-text'>
+  12年来佰锐一直专注于音视频底层技术研究和基础数据通信能力的研究，打造了一款具有独立知识产权、世界一流的跨平台音视频解决方案产品“AnyChat”，该产品家族包括“AnyChat SDK”、“AnyChat服务集群”和“AnyChat视频云平台”。实现了线下线上音视频能力的全部贯通，<text style='color: rgb(20,145,237);'>一站式解决高清视频、全景录像、音视频呼叫、智能排队等技术难题，满足金融、证券、医疗、教育、智能设备等行业客户在不同应用领域中的音视频实时通信需求，</text>成为首屈一指的音视频能力解决方案提供商，在某些行业已占据95%以上的市场份额。
   </view>
-  <view class='liverouter'>
-    <button type="primary" size="primary" bindtap="gotorecord">拍照录像</button>
-    <button type="primary" size="primary" bindtap="gotomap">打开地图</button>
-  </view>
-  <view class='liverouter'>
+  <view class='liverouter' wx:if="{{1 == 0}}">
     <button type="primary" size="primary" bindtap="gotoqrcode">扫一扫</button>
   </view>
 </view>

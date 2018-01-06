@@ -1,0 +1,29 @@
+<view class="mainUI"> 
+  <view class='tips'>
+    <text>请选择点击以下列表，体验小程序功能</text>
+  </view>
+  <view class='guide-box'>
+    <view wx:for="{{entryInfos}}" wx:key="*this" id="{{index}}" class='guide' bindtap='onEntryTap'>
+      <block>
+        <image class="guide_icon" src="{{item.icon}}" mode="aspectFit" />
+        <view class="guide_label">{{item.title}}</view>
+      </block>
+    </view>
+    <view class='guide' bindtap='onQrcode'>
+      <block>
+        <image class="guide_icon" src="../Resources/push.png" mode="aspectFit" />
+        <view class="guide_label">扫一扫</view>
+      </block>
+    </view>
+    <view class='guide-nomore guide-nomore-bk'>
+      <view class="guide_nomore_label">
+        <view>更多功能</view>
+        <view>敬请期待</view> 
+      </view>
+    </view>
+    <view class='guide-nomore'></view>
+  </view>
+  <view class='logo-box'>
+    <image class='logo' src='../Resources/main/bairui.png'></image>
+  </view>
+</view>

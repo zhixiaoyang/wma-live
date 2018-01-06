@@ -3,14 +3,28 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/live/live",
-    "pages/tv/tv",
+    "pages/audience/audience",
     "pages/map/map",
-    "pages/record/record"
+    "pages/record/record",
+    "pages/webview/webview",
+    "pages/main/main"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "AnyChat",
     "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "佰锐简介"
+      },
+      {
+        "pagePath": "pages/main/main",
+        "text": "功能体验"
+      }
+    ]
   }
 }

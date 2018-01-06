@@ -43,3 +43,26 @@
 .sys-info-item {
   display: block;
 }
+.tag-container {
+  text-align: center;
+  padding: 10px 0 10px 0;
+  width: 100%;
+}
+.tag-container .tag-line {
+  display: inline-block;
+  text-align: center;
+  width: 50%;
+}
+.introduce-text {
+  font-size: 14px;
+  text-indent: 2em;
+  padding: 0 15px;
+}
+.main-container {
+  padding: 30px 0 30px;
+}
+.main-header {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
