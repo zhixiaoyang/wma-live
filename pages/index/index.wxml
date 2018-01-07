@@ -35,7 +35,4 @@
   <view class='introduce-text'>
   12年来佰锐一直专注于音视频底层技术研究和基础数据通信能力的研究，打造了一款具有独立知识产权、世界一流的跨平台音视频解决方案产品“AnyChat”，该产品家族包括“AnyChat SDK”、“AnyChat服务集群”和“AnyChat视频云平台”。实现了线下线上音视频能力的全部贯通，<text style='color: rgb(20,145,237);'>一站式解决高清视频、全景录像、音视频呼叫、智能排队等技术难题，满足金融、证券、医疗、教育、智能设备等行业客户在不同应用领域中的音视频实时通信需求，</text>成为首屈一指的音视频能力解决方案提供商，在某些行业已占据95%以上的市场份额。
   </view>
-  <view class='liverouter' wx:if="{{1 == 0}}">
-    <button type="primary" size="primary" bindtap="gotoqrcode">扫一扫</button>
-  </view>
 </view>

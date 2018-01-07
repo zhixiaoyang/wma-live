@@ -1,7 +1,19 @@
+.container {
+  padding: 20px;
+}
+.camera-style {
+  width: calc(100vw - 40px);
+  height: calc(100vh - 40px);
+}
 .opt-wrapper {
   text-align: center;
+  width: 100vw;
+  height: 70px;
 }
 .opt-wrapper > button {
   display: inline-block;
   margin: 10px;
+}
+.image-preview,.video-player {
+  margin-top: 20px;
 }

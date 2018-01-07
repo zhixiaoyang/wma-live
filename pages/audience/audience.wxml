@@ -1,8 +1,11 @@
 <!--index.wxml-->
 <view class="container">
-  <view class='tv-info'>
-    <text>当前拉流地址：</text>
-    <text>rtmp://118.190.70.37:1935/live/stream</text>
-  </view>
-  <live-player src="rtmp://118.190.70.37:1935/live/stream" mode="live" background-mute="ture" autoplay bindstatechange="statechange" max-cache="1" style="width: 300px; height: 225px;" />
+  <live-player src="rtmp://118.190.70.37:1935/live/stream" mode="live" background-mute="ture" autoplay bindstatechange="statechange" max-cache="1" style="width: 100vw; height: 100vh;">
+    <cover-view class='stream-info'>
+      当前拉流地址：
+    </cover-view>
+    <cover-view class='stream-info'>
+      rtmp://118.190.70.37:1935/live/stream
+    </cover-view>
+  </live-player>
 </view>

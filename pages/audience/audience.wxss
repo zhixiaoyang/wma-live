@@ -1,33 +1,11 @@
-/**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: -80px;
+.container {
+  padding: 0;
 }
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
-
-.userinfo-nickname {
-  color: #aaa;
-}
-
-.usermotto {
-  margin: 10px 0;
-}
-
-.anychat-desc-title {
-  color: rgb(20,145,237);
-  padding-left: 20px;
-}
-.desc-container {
-  padding: 0 8px;
-}
-.tv-info {
-  padding:10px 10px 20px 50px;
+.stream-info {
+  padding: 0 15px 0 15px;
+  width: 100vw;
+  height: 25px;
+  color: #fff;
+  line-height: 25px;
+  text-align: left;
 }

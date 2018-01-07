@@ -6,6 +6,18 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
 
+    //位置
+    wx.getLocation({
+      type: 'gcj02', //返回可以用于wx.openLocation的经纬度
+      success: (res) => {
+        this.globalData.latlong = {
+          latitude: res.latitude, 
+          longitude: res.longitude
+        }
+        console.log(this.globalData)
+      }
+    })
+
     // 登录
     wx.login({
       success: res => {
@@ -29,11 +41,19 @@ App({
               }
             }
           })
+        } else {
+          wx.authorize({
+            scope: 'scope.userInfo',
+            success: res => {
+              this.globalData.userInfo = res.userInfo
+            }
+          })
         }
       }
     })
   },
   globalData: {
+    latlong: {},
     userInfo: null,
     vips: ['La Tour Eiffel'],
     secret: 'E4BDA0E5BE88E5A5BDEFBC8CE68891E5BE88E5969CE6ACA2E4BDA0'

@@ -1,6 +1,8 @@
 <!--index.wxml-->
 <view class="container">
-  <view class='title-info'>Welcome {{userInfo.nickName}}</view>
-  <view class='title-info' wx:if="{{isvip}}">{{secret}}</view>
-  <live-pusher url="rtmp://118.190.70.37:1935/live/stream" max-bitrate="200" mode="RTC" autopush bindstatechange="statechange" style="width: 300px; height: 225px;" />
+  <live-pusher url="rtmp://118.190.70.37:1935/live/stream" max-bitrate="200" mode="RTC" autopush bindstatechange="statechange" style="width: 100vw; height: 100vh;">
+    <cover-view wx:if="{{isvip}}" class='welcome-info'>
+      Welcome {{userInfo.nickName}} {{secret}}
+    </cover-view>
+  </live-pusher>
 </view>

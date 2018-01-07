@@ -1,14 +1,14 @@
 <!--index.wxml-->
 <view class="container">
-  <camera device-position="back" flash="off" binderror="error" style="width: 100%; height: 300px;"></camera>
-  <view class='opt-wrapper'>
-    <button type="primary" bindtap="takePhoto">拍照</button>
-    <button type="{{btntype}}" bindtap="recordVideo">{{btntext}}</button>
-  </view>
+  <camera device-position="back" flash="off" binderror="error" class='camera-style'></camera>
   <view wx:if="{{preview == 'image'}}" class='image-preview'>
     <image mode="widthFix" src="{{p_src}}"></image>
   </view>
   <view wx:if="{{preview == 'video'}}" class="video-player">
-    <video src="{{v_src}}"   controls ></video>
+    <video src="{{v_src}}" controls class='camera-style'></video>
+  </view>
+  <view class='opt-wrapper'>
+    <button type="primary" bindtap="takePhoto">拍照</button>
+    <button type="{{btntype}}" bindtap="recordVideo">{{btntext}}</button>
   </view>
 </view>
