@@ -1,0 +1,6 @@
+<view>接收消息{{recieve_msgs}}</view>
+<view>发送消息{{recieve_msgs}}</view>
+<view class="section">
+  <input placeholder="发送信息" auto-focus/>
+</view>
+<button type="primary" bindtap="primary"> send </button>

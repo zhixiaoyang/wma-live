@@ -12,7 +12,7 @@ Page({
       { icon: "../Resources/doubleroom.png", title: "观看直播", navigateTo: "../audience/audience" },
       { icon: "../Resources/multiroom.png", title: "拍照录像", navigateTo: "../record/record" },
       { icon: "../Resources/vodplay.png", title: "地图导航", navigateTo: "../map/map" },
-      // { icon: "../Resources/play.png", title: "直播播放器", navigateTo: "../play/play" },
+      // { icon: "../Resources/vodplay.png", title: "信令服务", navigateTo: "../signaling/signaling" },
       // { icon: "../Resources/rtplay.png", title: "低延时播放", navigateTo: "../rtplay/rtplay" }
       // { icon: "../Resources/wawaplay@2x.png", title: "在线抓娃娃", navigateTo: "../wawaplayer/wawaroomlist/wawaroomlist" }
     ]
