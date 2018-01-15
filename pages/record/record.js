@@ -12,12 +12,8 @@ Page({
   },
   onShow: function () {
     ctx = wx.createCameraContext()
-    // Do something when page show.
-    console.log("onShow")
   },
   onHide: function () {
-    // Do something when page hide.
-    console.log("onHide")
   },
   takePhoto() {
     ctx.takePhoto({
@@ -47,7 +43,6 @@ Page({
     } else {
       ctx.startRecord({
         success: function(){
-          console.log('开始成功');
           recording = true;
           _this.setData({
             btntext: '正在录制',
@@ -60,9 +55,7 @@ Page({
             content: JSON.stringify(err),
             success: function (res) {
               if (res.confirm) {
-                console.log('用户点击确定')
               } else if (res.cancel) {
-                console.log('用户点击取消')
               }
             }
           });
@@ -72,6 +65,5 @@ Page({
     }
   },
   error(e) {
-    console.log(e.detail)
   }
 })

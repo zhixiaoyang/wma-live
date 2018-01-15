@@ -24,7 +24,6 @@ Page({
     })
   },
   statechange(e) {
-    console.log('live-pusher code:', e.errCode)
   },
   onLoad: function () {
     if (app.globalData.userInfo) {

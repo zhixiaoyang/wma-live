@@ -7,7 +7,8 @@
     "pages/map/map",
     "pages/record/record",
     "pages/webview/webview",
-    "pages/main/main"
+    "pages/main/main",
+    "pages/dbroom/dbroom"
   ],
   "window":{
     "backgroundTextStyle":"light",

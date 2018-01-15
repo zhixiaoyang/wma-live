@@ -22,6 +22,7 @@
       </view>
     </view>
     <view class='guide-nomore'></view>
+    <view class='guide-nomore'></view>
   </view>
   <view class='logo-box'>
     <image class='logo' src='../Resources/main/bairui.png'></image>

@@ -10,7 +10,6 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   statechange(e) {
-    console.log('live-pusher code:', e.errCode)
   },
   onLoad: function () {
     if (app.globalData.userInfo) {
@@ -41,15 +40,9 @@ Page({
     }
   },
   onShow: function () {
-    // Do something when page show.
-    console.log("onShow")
   },
   onHide: function () {
-    // Do something when page hide.
-    console.log("onHide")
   },
   onUnload: function () {
-    // Do something when page close.
-    console.log("onUnload")
   }
 })

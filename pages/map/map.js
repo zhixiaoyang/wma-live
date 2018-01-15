@@ -31,18 +31,26 @@ Page({
     }]
   },
   onReady: function(){
-    this.setData({
-      latitude: app.globalData.latlong.latitude,
-      longitude: app.globalData.latlong.longitude
-    })
+      //位置
+      wx.getLocation({
+          type: 'gcj02', //返回可以用于wx.openLocation的经纬度
+          success: (res) => {
+              this.setData({
+                  latitude: res.latitude,
+                  longitude: res.longitude
+              })
+              this.globalData.latlong = {
+                  latitude: res.latitude,
+                  longitude: res.longitude
+              }
+          }
+      })
+    
   },
   regionchange(e) {
-    console.log(e.type)
   },
   markertap(e) {
-    console.log(e.markerId)
   },
   controltap(e) {
-    console.log(e.controlId)
   }
 })

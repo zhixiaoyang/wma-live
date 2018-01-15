@@ -1,0 +1,11 @@
+.container {
+  padding: 0;
+}
+.stream-info {
+  padding: 0 15px 0 15px;
+  width: 100vw;
+  height: 25px;
+  color: #fff;
+  line-height: 25px;
+  text-align: center;
+}
