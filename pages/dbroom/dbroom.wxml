@@ -5,12 +5,12 @@
     <button bindtap="onEnterRoom">开始聊天</button>
   </view>
   <view wx:if="{{process == 'room'}}">
-    <live-pusher url="rtmp://118.190.70.37:1935/live/{{pushStreamNo}}" max-bitrate="200" mode="RTC" autopush bindstatechange="statechange" style="width: 100vw; height: 50vh;">
+    <live-pusher id="pusher" url="rtmp://118.190.70.37:1935/live/{{pushStreamNo}}" audio-quality="high" aspect="3:4" min-bitrate="150" max-bitrate="200" mode="RTC" debug="true" autopush bindstatechange="onPush" style="width: 100vw; height: 50vh;">
         <cover-view class='stream-info'>
         推流号：{{pushStreamNo}}，拉流号：{{pullStreamNo}}
         </cover-view>
     </live-pusher>
-     <live-player src="rtmp://118.190.70.37:1935/live/{{pullStreamNo}}" mode="live" background-mute="ture" autoplay bindstatechange="statechange" max-cache="1" style="width: 100vw; height: 50vh;">
-    </live-player> 
+      <live-player id="puller" src="rtmp://118.190.70.37:1935/live/{{pullStreamNo}}" mode="RTC" background-mute="ture" autoplay bindstatechange="onPull" min-cache="1" max-cache="3" style="width: 100vw; height: 50vh;">
+    </live-player>  
   </view>
 </view>

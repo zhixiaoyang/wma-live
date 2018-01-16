@@ -15,19 +15,19 @@ Page({
         })
     },
     onEnterRoom: function () {
-        console.log("this.roomNo", this.roomNo)
         let roomNo = this.data.roomNo;
         let pushStreamNo = 0;
         let pullStreamNo = 0;
         wx.showToast({
             title: app.globalData.userInfo.nickName,
         })
-        if (app.globalData.userInfo.nickName == "忆楼欢") {
-            pushStreamNo = 'YiLouHuan'
-            pullStreamNo = 'Random' + roomNo
+        console.log("roomNo", roomNo)
+        if (roomNo % 2 == 0) {
+            pushStreamNo = '1008600'
+            pullStreamNo = '1008601'
         } else {
-            pushStreamNo = 'Random' + roomNo
-            pullStreamNo = 'YiLouHuan'
+            pushStreamNo = '1008601'
+            pullStreamNo = '1008600'
         }
         this.setData({
             process: 'room',
@@ -35,7 +35,21 @@ Page({
             pullStreamNo: pullStreamNo
         });
     },
-    statechange(e) {
+    onPush(e) {
+        var code;
+        if (e.detail) {
+            code = e.detail.code;
+        } else {
+            code = e;
+        }
+    },
+    onPull(e) {
+        var code;
+        if (e.detail) {
+            code = e.detail.code;
+        } else {
+            code = e;
+        }
     },
     onLoad: function () {
 
